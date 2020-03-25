@@ -1,31 +1,41 @@
 # Моя среда разработки
 Я работаю на MacOS Mojave.
+
 Для корректного запуска сервера нужно:
+
 mysql: stable 8.0.19
+
 node: stable 13.11.0
 
 # Как выполнял работу
 Ссылки на статьи, на которые опирался при работе:
-## Create new React-js app : 
+#### Create new React-js app : 
 https://github.com/facebook/create-react-app#create-react-app--
 Быстрый старт + сразу идет установка необходимого софта для сборки. C описания пакета: «Под капотом» используются Babel и webpack.
 
-## Совмещение стилей
+#### Совмещение стилей
 Как использовать ES6 в node js https://www.freecodecamp.org/news/how-to-enable-es6-and-beyond-syntax-with-node-and-express-68d3e11fe1ab/
+
 Было неудобно писать на node js, без такой вещи удобной как import. Для этого установил __esm__ пакет:
+
 npm i esm --save
 
-## Поднятие сразу 3 серверов 
+#### Поднятие сразу 3 серверов 
 Сервер для приложения React: npm run start. Запускается на localhost:3000
+
 Node Js сервер: npm run server. Запускается на localhost:3001
+
 mysql сервер: npm run mysqlserv. Запускается на localhost:3006
 
 Пришлось чуть поразбираться, как сделать это паралелльно. Особенно с mysql. О самом сервер чуть позже.
+
 Статья в помощь https://www.twilio.com/blog/react-app-with-node-js-server-proxy
+
 Сервера React и Node Js на прокси соединение.
 
 # База данных
-Выбрал mysql так как максимально распространена среди разработки. 
+Выбрал mysql так как максимально распространена среди разработки.
+
 В папке DB_base хранится база данных, которую я сам создал для приложения. В бд 2 таблицы: пользователи и диаграммы.
 ###  Быстрый импорт
 Чтобы быстро устоновить мою бд пропишите: mysql -u root -p myexample < myexample.sql
