@@ -42,11 +42,9 @@ mysql сервер: npm run mysqlserv. Запускается на localhost:300
 
 Так как теперь подключаться по __root__ к базе нельзя, пришлось создать пользователя для подключения:
 
->sudo mysql -u root -p (спросит пароль)  
-
-create user 'test_user'@'%' identified by 'test_user';  
-
-grant all privileges on *.* to 'test_user'@'%';  
+>sudo mysql -u root -p (спросит пароль)<br/>
+create user 'test_user'@'%' identified by 'test_user';<br/>
+grant all privileges on *.* to 'test_user'@'%';<br/>
 
 grant grant option on *.* to 'test_user'@'%';  
 
