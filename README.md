@@ -61,10 +61,9 @@ quit;
 
 >Таблицы tbl_user
 
-
-| user_id | user_login | user_password |</br>
-| ---------:|------------:|--------------:|</br>
-|       1 | admin      | admin         |</br>
+user_id | user_login | user_password
+---: | :-- | :-- 
+|       1 | admin | admin
 
 
 >Описание таблицы с диаграммами
