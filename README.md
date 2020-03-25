@@ -68,17 +68,12 @@ user_id | user_login | user_password
 
 >Описание таблицы с диаграммами
 
-+--------------+-------------+------+-----+---------+-------+
 
-| Field        | Type        | Null | Key | Default | Extra |
+Field| Type| Null | Key | Default | Extra |
+---| ---| ---| ---| ---| ---
+diagram_name | varchar(45) | NO   |     | NULL    |      
+diagram_text | longtext    | NO   |     | NULL    |      
 
-+--------------+-------------+------+-----+---------+-------+
-
-| diagram_name | varchar(45) | NO   |     | NULL    |       |
-
-| diagram_text | longtext    | NO   |     | NULL    |       |
-
-+--------------+-------------+------+-----+---------+-------+
 
 diagram_name - название диаграммы
 
