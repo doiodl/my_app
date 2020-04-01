@@ -12,6 +12,17 @@ const check_user = async(user, password) => {
 	});
 }
 
+function get_list_all(){
+	return new Promise((resolve, reject) => {
+	Connection.query('SELECT * FROM myexample.`tbl_diagrams`',
+			(err, res) => {
+				if (err)
+					return reject(err)
+				return resolve(res);
+			});
+	});
+}
+
 const get_list = async() => {
 	return new Promise((resolve, reject) => {
 	Connection.query('SELECT diagram_name FROM myexample.`tbl_diagrams`',
@@ -49,3 +60,4 @@ exports.check_user = check_user;
 exports.get_list = get_list;
 exports.add_diagram = add_diagram;
 exports.get_text_d = get_text_d;
+exports.get_list_all = get_list_all;

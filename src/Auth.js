@@ -21,8 +21,12 @@ class Auth extends Component {
 		handleSubmit(event) {
 			event.preventDefault();
 			fetch(`/api/check_user?user_id=${encodeURIComponent(this.state.name)}&password=${document.getElementById('password').value}`)
-			.then(response => response.json())
+				.then(response =>
+					// console.log(response.json())
+					response.json()
+				)
 				.then((result) => {
+					console.log(result)
 					if (result.answer)
 					{
 						var cookies = new Cookies();
